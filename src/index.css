@@ -1,13 +1,42 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html, body {
+  /* margin: 0; */
+  font-family: 'Kumbh Sans', sans-serif;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.white-svg {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7490%) hue-rotate(213deg) brightness(102%) contrast(101%);
+}
+
+.black-svg {
+  filter: brightness(0) saturate(100%) invert(8%) sepia(4%) saturate(14%) hue-rotate(354deg) brightness(103%) contrast(90%);
+}
+
+.remove:hover {
+  filter: brightness(0) saturate(100%) invert(53%) sepia(76%) saturate(1582%) hue-rotate(347deg) brightness(100%) contrast(102%);
+}
+.previous-btn:hover img {
+  filter: brightness(0) saturate(100%) invert(53%) sepia(76%) saturate(1582%) hue-rotate(347deg) brightness(100%) contrast(102%);
+}
+
+.next-btn:hover img {
+  filter: brightness(0) saturate(100%) invert(53%) sepia(76%) saturate(1582%) hue-rotate(347deg) brightness(100%) contrast(102%);
+}
+
+.cart:hover {
+  filter: brightness(0) saturate(100%) invert(8%) sepia(4%) saturate(14%) hue-rotate(354deg) brightness(103%) contrast(90%);
+}
+
+.remove:hover {
+  filter: brightness(0) saturate(100%) invert(53%) sepia(76%) saturate(1582%) hue-rotate(347deg) brightness(100%) contrast(102%);
 }
