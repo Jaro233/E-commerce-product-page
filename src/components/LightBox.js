@@ -23,13 +23,13 @@ function LightBox({mainImageLightBox, products, setMainImageLightBox, chooseMain
               <div className="next-btn absolute top-56 right-[-2rem] bg-white w-14 h-14 rounded-full cursor-pointer" 
               onClick={() => { if(k < 3) { setMainImageLightBox(products[k+=1].mainImage); var thumbnails = [...document.querySelectorAll(".thumbnail_modal")]; thumbnails[k].click() } else if(k >= 3) { k = 0; setMainImageLightBox(products[k].mainImage); var thumbnails = [...document.querySelectorAll(".thumbnail_modal")]; thumbnails[k].click() }}}><img className="absolute right-5 top-4" src={next} alt="image"/>
               </div>
-              <img className="w-full h-full max-h-[33rem] rounded-xl" src={mainImageLightBox} alt="product-image"/>
+              <img className="w-full h-full max-h-[33rem] rounded-xl" src={process.env.PUBLIC_URL + mainImageLightBox} alt="product-image"/>
             </div>
             <div className="flex w-full justify-center gap-7 mt-7">
-              <div className="thumbnail_modal thumbnail2 rounded-xl cursor-pointer" onClick={() => { setMainImageLightBox(products[0].mainImage); chooseMainImage_modal()}}><img className="img1 max-w-[6rem] w-full md:rounded-xl hover:opacity-50 transition-all ease-in delay-75" src={products[0].thumbnail} alt="thumbnail-image"/></div>
-              <div className="thumbnail_modal rounded-xl cursor-pointer" onClick={() => { setMainImageLightBox(products[1].mainImage); chooseMainImage_modal(); }}><img className="img2 max-w-[6rem] w-full md:rounded-xl hover:opacity-50 transition-all ease-in delay-75" src={products[1].thumbnail} alt="thumbnail-image"/></div>
-              <div className="thumbnail_modal rounded-xl cursor-pointer" onClick={() => { setMainImageLightBox(products[2].mainImage); chooseMainImage_modal() }}><img className="img3 max-w-[6rem] w-full md:rounded-xl hover:opacity-50 transition-all ease-in delay-75" src={products[2].thumbnail} alt="thumbnail-image"/></div>
-              <div className="thumbnail_modal rounded-xl cursor-pointer" onClick={() => { setMainImageLightBox(products[3].mainImage); chooseMainImage_modal() }}><img className="img4 max-w-[6rem] w-full md:rounded-xl hover:opacity-50 transition-all ease-in delay-75" src={products[3].thumbnail} alt="thumbnail-image"/></div>
+              <div className="thumbnail_modal thumbnail2 rounded-xl cursor-pointer" onClick={() => { setMainImageLightBox(products[0].mainImage); chooseMainImage_modal()}}><img className="img1 max-w-[6rem] w-full md:rounded-xl hover:opacity-50 transition-all ease-in delay-75" src={process.env.PUBLIC_URL + products[0].thumbnail} alt="thumbnail-image"/></div>
+              <div className="thumbnail_modal rounded-xl cursor-pointer" onClick={() => { setMainImageLightBox(products[1].mainImage); chooseMainImage_modal(); }}><img className="img2 max-w-[6rem] w-full md:rounded-xl hover:opacity-50 transition-all ease-in delay-75" src={process.env.PUBLIC_URL + products[1].thumbnail} alt="thumbnail-image"/></div>
+              <div className="thumbnail_modal rounded-xl cursor-pointer" onClick={() => { setMainImageLightBox(products[2].mainImage); chooseMainImage_modal() }}><img className="img3 max-w-[6rem] w-full md:rounded-xl hover:opacity-50 transition-all ease-in delay-75" src={process.env.PUBLIC_URL + products[2].thumbnail} alt="thumbnail-image"/></div>
+              <div className="thumbnail_modal rounded-xl cursor-pointer" onClick={() => { setMainImageLightBox(products[3].mainImage); chooseMainImage_modal() }}><img className="img4 max-w-[6rem] w-full md:rounded-xl hover:opacity-50 transition-all ease-in delay-75" src={process.env.PUBLIC_URL + products[3].thumbnail} alt="thumbnail-image"/></div>
             </div>
           </div>
         </div>

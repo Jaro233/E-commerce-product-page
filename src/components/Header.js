@@ -74,7 +74,7 @@ function Header({numberOfProducts, products, setIsCartEmpty, setNumberOfProducts
               <>
                 <div className="flex px-4 py-6 gap-3 justify-between items-center">
                   <div className="flex gap-4">
-                    <img className="w-12 rounded-md" src={products[0].mainImage} alt="picture" />
+                    <img className="w-12 rounded-md" src={process.env.PUBLIC_URL + products[0].mainImage} alt="picture" />
                     <div className="flex flex-col text-left">
                       <div className="text-gray-500 truncate w-48">Autumn Limited Edition Sneakers</div>
                       <div className="text-gray-500">$125.00 x {numberOfProducts}<span className="font-bold text-black"> ${125.00 * numberOfProducts}.00</span></div>
