@@ -14,7 +14,7 @@ function Section({numberOfProducts, products, setIsCartEmpty, setNumberOfProduct
        <section className="mb-10 md:flex md:mt-20 md:px-10">
         <div className="relative">
           <div className="flex-col w-full h-full hidden md:flex">
-            <img onClick={() => {  document.querySelector(".overlay").classList.remove("hidden"); document.querySelector(".lightbox").classList.remove("hidden"); document.querySelector(".lightbox").classList.add("flex"); }} className="w-full h-full max-h-[28rem] rounded-xl" src={process.env.PUBLIC_URL + mainImage} alt="product-image"/>
+            <img onClick={() => {  document.querySelector(".overlay").classList.remove("hidden"); document.querySelector(".lightbox").classList.remove("hidden"); document.querySelector(".lightbox").classList.add("flex"); }} className="w-full h-full max-h-[28rem] rounded-xl cursor-pointer" src={process.env.PUBLIC_URL + mainImage} alt="product-image"/>
             <div className="flex w-full gap-5 mt-7">
               <div className="thumbnail thumbnail1 rounded-xl cursor-pointer" onClick={() => { setMainImage(products[0].mainImage); chooseMainImage()}}><img className="img1 max-w-[6rem] w-full md:rounded-xl hover:opacity-50 transition-all ease-in delay-75" src={process.env.PUBLIC_URL + products[0].thumbnail} alt="thumbnail-image"/></div>
               <div className="thumbnail rounded-xl cursor-pointer" onClick={() => { setMainImage(products[1].mainImage); chooseMainImage(); }}><img className="img2 max-w-[6rem] w-full md:rounded-xl hover:opacity-50 transition-all ease-in delay-75" src={process.env.PUBLIC_URL + products[1].thumbnail} alt="thumbnail-image"/></div>
@@ -22,12 +22,12 @@ function Section({numberOfProducts, products, setIsCartEmpty, setNumberOfProduct
               <div className="thumbnail rounded-xl cursor-pointer" onClick={() => { setMainImage(products[3].mainImage); chooseMainImage() }}><img className="img4 max-w-[6rem] w-full md:rounded-xl hover:opacity-50 transition-all ease-in delay-75" src={process.env.PUBLIC_URL + products[3].thumbnail} alt="thumbnail-image"/></div>
             </div>
           </div>
-          <img className="w-full max-h-[20rem] h-full sm:object-cover md:rounded-xl md:hidden" src={process.env.PUBLIC_URL + mainImage} alt="product-image"/>
-          <div className="absolute top-36 left-4 bg-white w-10 h-10 rounded-full md:hidden"  
-          onClick={() => { if(i > 0) { setMainImage(products[i-=1].mainImage) } else if(i <= 0) { i = 3; setMainImage(products[i].mainImage) }}}><img className="absolute left-3 top-2" src={previous} alt="image"/>
+          <img className="w-full h-full object-cover md:rounded-xl md:hidden" src={process.env.PUBLIC_URL + mainImage} alt="product-image"/>
+          <div className="absolute bottom-1/2 left-4 bg-white w-12 h-12 rounded-full md:hidden"  
+          onClick={() => { if(i > 0) { setMainImage(products[i-=1].mainImage) } else if(i <= 0) { i = 3; setMainImage(products[i].mainImage) }}}><img className="absolute left-4 top-3" src={previous} alt="image"/>
           </div>
-          <div className="absolute top-36 right-4 bg-white w-10 h-10 rounded-full md:hidden" 
-          onClick={() => { if(i < 3) { setMainImage(products[i+=1].mainImage) } else if(i >= 3) { i = 0; setMainImage(products[i].mainImage) }}}><img className="absolute right-3 top-2" src={next} alt="image"/>
+          <div className="absolute bottom-1/2 right-4 bg-white w-12 h-12 rounded-full md:hidden" 
+          onClick={() => { if(i < 3) { setMainImage(products[i+=1].mainImage) } else if(i >= 3) { i = 0; setMainImage(products[i].mainImage) }}}><img className="absolute right-4 top-3" src={next} alt="image"/>
           </div>
         </div>
         <div className="flex flex-col p-4 md:w-[32rem] md:ml-10 xl:ml-24 md:justify-center">

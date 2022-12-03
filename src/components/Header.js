@@ -8,33 +8,35 @@ import cart from "../images/icon-cart.svg"
 function Header({numberOfProducts, products, setIsCartEmpty, setNumberOfProducts, setProductsToCard, isCartEmpty}) {
     return (
       <>
-        <header className="flex relative h-12 justify-between pt-6 p-4 mb-4 md:mb-0 md:border-b-2 md:border-black-200 md:mt-0 md:p-0 md:h-28 md:items-center md:mx-4 xl:mx-0">
-          <div className="icon-and-logo flex gap-4 items-center">
-            <img onClick={() => { document.querySelector(".sidenav").classList.remove("hidden");  document.querySelector(".overlay").classList.remove("hidden")}} src={hamburgerIcon} className="w-100 h-100 md:hidden" alt="hamburgerIcon" srcset=""/>
-            <img src={logo} alt="logo" srcset=""/>
-          </div>
-          <div className="flex w-100 h-100 relative">
-            <div className="sidenav hidden left-0 top-0 w-60 z-30 h-full shadow-md bg-white fixed">
-              <ul className="relative">
-                <img onClick={() => { document.querySelector(".sidenav").classList.add("hidden"); document.querySelector(".overlay").classList.add("hidden")}} className="flex items-center py-4 px-6 h-12 mb-4" src={close} alt=""/>
-                <li v="relative">
-                  <a className="flex items-center font-bold py-4 px-6 h-12 overflow-hidden  text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-75 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="dark">Collections</a>
-                </li>
-                <li className="relative">
-                  <a className="flex items-center font-bold py-4 px-6 h-12 overflow-hidden  text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-75 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="dark">Men</a>
-                </li>
-                <li className="relative">
-                  <a className="flex items-center font-bold py-4 px-6 h-12 overflow-hidden text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-75 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="dark">Women</a>
-                </li>
-                <li className="relative">
-                  <a className="flex items-center font-bold py-4 px-6 h-12 overflow-hidden  text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-75 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="dark">About</a>
-                </li>
-                <li className="relative">
-                  <a className="flex items-center font-bold py-4 px-6 h-12 overflow-hidden text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-75 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="dark">Contact</a>
-                </li>
-              </ul>
+        <header className="flex sticky top-0 z-10 bg-white h-18 justify-between pt-6 p-4 md:mb-0 md:border-b-2 md:border-black-200 md:mt-0 md:p-0 md:h-28 md:items-center md:mx-4 xl:mx-0">
+          <div className="relative">
+            <div className="icon-and-logo flex gap-4 items-center">
+              <img onClick={() => { document.querySelector(".sidenav").classList.remove("hidden");  document.querySelector(".overlay").classList.remove("hidden")}} src={hamburgerIcon} className="w-100 h-100 md:hidden" alt="hamburgerIcon" srcset=""/>
+              <img src={logo} alt="logo" srcset=""/>
             </div>
-            <div className="overlay hidden top-0 right-0 z-20 dark-bg w-full h-full fixed bg-black opacity-60"></div>
+            <div className="flex w-100 h-100 relative">
+              <div className="sidenav hidden left-0 top-0 w-60 z-30 h-full shadow-md bg-white fixed">
+                <ul className="relative">
+                  <img onClick={() => { document.querySelector(".sidenav").classList.add("hidden"); document.querySelector(".overlay").classList.add("hidden")}} className="flex items-center py-4 px-4 h-12 mb-4 mt-2" src={close} alt=""/>
+                  <li v="relative">
+                    <a className="flex items-center font-bold py-4 px-4 h-12 overflow-hidden  text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-75 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="dark">Collections</a>
+                  </li>
+                  <li className="relative">
+                    <a className="flex items-center font-bold py-4 px-4 h-12 overflow-hidden  text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-75 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="dark">Men</a>
+                  </li>
+                  <li className="relative">
+                    <a className="flex items-center font-bold py-4 px-4 h-12 overflow-hidden text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-75 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="dark">Women</a>
+                  </li>
+                  <li className="relative">
+                    <a className="flex items-center font-bold py-4 px-4 h-12 overflow-hidden  text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-75 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="dark">About</a>
+                  </li>
+                  <li className="relative">
+                    <a className="flex items-center font-bold py-4 px-4 h-12 overflow-hidden text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-75 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="dark">Contact</a>
+                  </li>
+                </ul>
+              </div>
+              <div className="overlay hidden top-0 right-0 z-20 dark-bg w-full h-full fixed bg-black opacity-60"></div>
+            </div>
           </div>
           <div className="desktop-nav hidden items-center md:flex mr-auto ml-10 h-full ">
             <ul className="relative flex h-full items-center">
@@ -67,7 +69,7 @@ function Header({numberOfProducts, products, setIsCartEmpty, setNumberOfProducts
            
             <img src={avatar} alt="avatar" className="avatar w-8 h-min md:w-12 md:ml-4 cursor-pointer rounded-3xl hover:border-2 hover:border-new-orange transition-all ease-in delay-75"/>
           </div>
-          <div className="cart-dropdown-wrapper hidden w-full md:w-96 h-60 absolute z-10 top-20 right-0 md:top-28 md:right-[-4rem] px-2">
+          <div className="cart-dropdown-wrapper hidden w-full md:w-[25rem] h-60 absolute z-10 top-20 right-0 md:top-28 md:right-4 xl:right-[-4rem] px-2">
             <div className="cart-dropdown w-full h-60 z-50 bg-white rounded-xl top-5 shadow-2xl">
               <div className="border-b border-solid border-black-600 text-left px-4 py-5 font-bold">Cart</div>
               {isCartEmpty == false && (
@@ -76,7 +78,7 @@ function Header({numberOfProducts, products, setIsCartEmpty, setNumberOfProducts
                   <div className="flex gap-4">
                     <img className="w-12 rounded-md" src={process.env.PUBLIC_URL + products[0].mainImage} alt="picture" />
                     <div className="flex flex-col text-left">
-                      <div className="text-gray-500 truncate w-48">Autumn Limited Edition Sneakers</div>
+                      <div className="text-gray-500 flex-wrap w-full">Autumn Limited Edition Sneakers</div>
                       <div className="text-gray-500">$125.00 x {numberOfProducts}<span className="font-bold text-black"> ${125.00 * numberOfProducts}.00</span></div>
                     </div>
                   </div>
